@@ -2,7 +2,9 @@ import { teleBot } from "@/index";
 import { startBot } from "./start";
 import { log } from "@/utils/handlers";
 import { userState } from "@/vars/userState";
-import { template1Step1 } from "../creator/create1/step1";
+import { template1Step1 } from "../creator/1/step1";
+import { template1Step2 } from "../creator/1/step2";
+import { template1Step3 } from "../creator/1/step3";
 
 export function initiateBotCommands() {
   teleBot.api.setMyCommands([
@@ -20,6 +22,8 @@ export function initiateBotCommands() {
 
     if (template == 1) {
       if (step == 1) template1Step1(ctx);
+      if (step == 2) template1Step2(ctx);
+      if (step == 3) template1Step3(ctx);
     }
   });
 

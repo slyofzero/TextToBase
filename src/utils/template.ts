@@ -1,5 +1,7 @@
 import { templateDescriptions } from "@/templates";
 import { InlineKeyboard } from "grammy";
+import { load } from "cheerio";
+import fs from "fs/promises";
 
 export function generateTemplateKeyboard(id: number) {
   let prevId = Math.abs((id - 1) % 10);
@@ -32,4 +34,15 @@ export function generateTemplateText(id: number) {
 ${details}`;
 
   return text;
+}
+
+export async function editHtmlFile(
+  filePath: string,
+  identifier: string,
+  text: string
+) {
+  const data = await fs.readFile(filePath, "utf8");
+  const $ = load(data);
+  $(identifier).text(text || "");
+  await fs.writeFile(filePath, $.html(), "utf8");
 }
