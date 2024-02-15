@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
-    "dev": "nodemon --exec ts-node -r tsconfig-paths/register .",
+    "dev": "nodemon --ignore temp/ --exec ts-node -r tsconfig-paths/register .",
     "build": "tsc",
     "start": "ts-node -r tsconfig-paths/register src/index.ts"
   },
