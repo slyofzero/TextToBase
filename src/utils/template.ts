@@ -70,7 +70,6 @@ export async function editHtmlLink(
 ) {
   const data = await fs.readFile(filePath, "utf8");
   const $ = load(data);
-  $(identifier).attr("src", newSrc);
-  $(identifier).attr("srcset", newSrc);
+  $(identifier).attr("href", newSrc);
   await fs.writeFile(filePath, $.html(), "utf8");
 }

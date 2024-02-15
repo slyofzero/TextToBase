@@ -4,15 +4,16 @@ import { HearsContext, Context, InputFile } from "grammy";
 import { editHtmlFileText } from "@/utils/template";
 import { errorHandler } from "@/utils/handlers";
 import { prevMessage } from "@/vars/prevMessage";
+import { deleteFileOrFolder, zipFolder } from "@/utils/files";
 
-export async function template1Step2(ctx: HearsContext<Context>) {
+export async function template1Step14(ctx: HearsContext<Context>) {
   try {
     const from = ctx.from;
     const message = ctx.message;
-    const descriptionText = message?.text || "";
+    const title = message?.text || "";
 
     if (!from || !message) return ctx.reply("Please do /start again");
-    const confirmation = await ctx.reply("Adding...");
+    const confirmation = await ctx.reply("Compressing project file...");
 
     const filePath = path.join(
       process.cwd(),
@@ -21,17 +22,25 @@ export async function template1Step2(ctx: HearsContext<Context>) {
       "index.html"
     );
 
-    await editHtmlFileText(filePath, "p.lead", descriptionText);
+    await editHtmlFileText(filePath, "title", title);
 
     const storedPrevMessage = prevMessage[from.id];
-    const photo = new InputFile("./step-images/1/3.png");
-    const caption = `"${descriptionText}" set as description for the first section.\n\nNext up, send the image you want to be shown in the first section.\n\nStep 3 of 14`;
-    const reply = await ctx.replyWithPhoto(photo, { caption });
+    const caption = "Your project is ready.";
 
-    userState[from.id] = "1-3";
-    prevMessage[from.id] = reply.message_id;
+    const folderPath = path.join(process.cwd(), "temp", `${from.id}-1`);
+    const zipFolderPath = path.join(process.cwd(), "temp", `${from.id}.zip`);
+    await zipFolder(folderPath, zipFolderPath);
+    await ctx.replyWithDocument(new InputFile(zipFolderPath), {
+      caption,
+    });
+
+    delete userState[from.id];
+    delete prevMessage[from.id];
     ctx.deleteMessage();
     ctx.deleteMessages([storedPrevMessage, confirmation.message_id]);
+
+    deleteFileOrFolder(folderPath);
+    deleteFileOrFolder(zipFolderPath);
   } catch (error) {
     errorHandler(error);
     ctx.reply("Please do /start again");

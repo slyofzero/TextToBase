@@ -6,7 +6,7 @@ import { errorHandler } from "@/utils/handlers";
 import { FileFlavor } from "@grammyjs/files";
 import { prevMessage } from "@/vars/prevMessage";
 
-export async function template1Step5(ctx: FileFlavor<Context>) {
+export async function template1Step11(ctx: FileFlavor<Context>) {
   try {
     const from = ctx.from;
     const file = await ctx.getFile();
@@ -21,14 +21,14 @@ export async function template1Step5(ctx: FileFlavor<Context>) {
     const photoPath = path.join(dirPath, fileName);
     file.download(photoPath);
 
-    await editHtmlFileImage(filePath, 'img[alt="logo"]', `./${fileName}`);
+    await editHtmlFileImage(filePath, 'img[alt="Sketch"]', `./${fileName}`);
 
     const storedPrevMessage = prevMessage[from.id];
-    const photo = new InputFile("./step-images/1/6.png");
-    const caption = `Photo you sent is now set as the main image for the first section.\n\nNext up send the URL the button at the top right should lead to.\n\nStep 6 of 14`;
+    const photo = new InputFile("./step-images/1/12.png");
+    const caption = `Photo you sent is now set as the main image for the first section.\n\nNext up send the title for the sub-section in the next message.\n\nStep 12 of 14`;
     const reply = await ctx.replyWithPhoto(photo, { caption });
 
-    userState[from.id] = "1-6";
+    userState[from.id] = "1-12";
     prevMessage[from.id] = reply.message_id;
     ctx.deleteMessage();
     ctx.deleteMessages([storedPrevMessage, confirmation.message_id]);
