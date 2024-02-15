@@ -1,7 +1,7 @@
 import path from "path";
 import { userState } from "@/vars/userState";
 import { HearsContext, Context } from "grammy";
-import { editHtmlFile } from "@/utils/template";
+import { editHtmlFileText } from "@/utils/template";
 import { errorHandler } from "@/utils/handlers";
 
 export async function template1Step2(ctx: HearsContext<Context>) {
@@ -19,10 +19,10 @@ export async function template1Step2(ctx: HearsContext<Context>) {
       "index.html"
     );
 
-    await editHtmlFile(filePath, "p.lead", descriptionText);
-    userState[from.id] = "1-2";
+    await editHtmlFileText(filePath, "p.lead", descriptionText);
+    userState[from.id] = "1-3";
 
-    const text = `"${descriptionText}" set as description for the first section.\n\nNext up, send the description for the first section in the next message.`;
+    const text = `"${descriptionText}" set as description for the first section.\n\nNext up, send the image you want to be shown in the first section.`;
     ctx.reply(text);
   } catch (error) {
     errorHandler(error);

@@ -2,10 +2,11 @@ import {
   generateTemplateKeyboard,
   generateTemplateText,
 } from "@/utils/template";
-import { CallbackQueryContext, Context } from "grammy";
+import { CallbackQueryContext, Context, InputFile } from "grammy";
 
 export function buildWebsite(ctx: CallbackQueryContext<Context>) {
-  const text = generateTemplateText(1);
+  const caption = generateTemplateText(1);
   const keyboard = generateTemplateKeyboard(1);
-  ctx.reply(text, { reply_markup: keyboard });
+  const photo = new InputFile("./template-images/1.png");
+  ctx.replyWithPhoto(photo, { caption, reply_markup: keyboard });
 }

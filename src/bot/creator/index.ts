@@ -1,3 +1,5 @@
+export * from "./1";
+
 import { copyFolderSync } from "@/utils/files";
 import { errorHandler } from "@/utils/handlers";
 import { userState } from "@/vars/userState";

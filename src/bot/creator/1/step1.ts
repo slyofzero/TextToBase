@@ -1,7 +1,7 @@
 import path from "path";
 import { userState } from "@/vars/userState";
-import { HearsContext, Context } from "grammy";
-import { editHtmlFile } from "@/utils/template";
+import { HearsContext, Context, InputFile } from "grammy";
+import { editHtmlFileText } from "@/utils/template";
 import { errorHandler } from "@/utils/handlers";
 
 export async function template1Step1(ctx: HearsContext<Context>) {
@@ -19,11 +19,13 @@ export async function template1Step1(ctx: HearsContext<Context>) {
       "index.html"
     );
 
-    await editHtmlFile(filePath, "h1.hero", heroText);
+    await editHtmlFileText(filePath, "h1.hero", heroText);
     userState[from.id] = "1-2";
 
-    const text = `"${heroText}" set as Hero text.\n\nNext up, send the description for the first section in the next message.`;
-    ctx.reply(text);
+    const photo = new InputFile("./images/1.png");
+    const caption = `"${heroText}" set as Hero text.\n\nNext up, send the description for the first section in the next message.`;
+
+    ctx.replyWithPhoto(photo, { caption });
   } catch (error) {
     errorHandler(error);
     ctx.reply("Please do /start again");

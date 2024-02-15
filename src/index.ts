@@ -1,9 +1,12 @@
-import { Bot } from "grammy";
+import { Bot, Context } from "grammy";
+import { FileFlavor, hydrateFiles } from "@grammyjs/files";
 import { initiateBotCommands, initiateCallbackQueries } from "./bot";
 import { log } from "./utils/handlers";
 import { BOT_TOKEN } from "./utils/env";
 
-export const teleBot = new Bot(BOT_TOKEN || "");
+type FileContext = FileFlavor<Context>;
+export const teleBot = new Bot<FileContext>(BOT_TOKEN || "");
+teleBot.api.config.use(hydrateFiles(teleBot.token));
 log("Bot instance ready");
 
 // Check for new transfers at every 20 seconds
