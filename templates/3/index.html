@@ -23,9 +23,11 @@
               <h1 class="m-0">
                 <a href="#">
                   <img
+                    id="logo"
                     class="header-logo-image"
                     src="dist/images/5f4b964c-ebad-4505-8a29-6a2e5cb0667a.png"
                     alt="Logo"
+                    style="height: 3rem"
                   />
                 </a>
               </h1>
@@ -39,12 +41,17 @@
           <div class="container">
             <div class="hero-inner">
               <div class="hero-copy">
-                <h1 class="hero-title mt-0">Title</h1>
-                <p class="hero-paragraph">Description</p>
+                <h1 class="hero-title mt-0" id="hero">Title</h1>
+                <p class="hero-paragraph" id="hero-description">Description</p>
                 <div class="hero-cta">
-                  <a class="button button-primary" href="www.google.com"
+                  <a
+                    id="hero-btn-1"
+                    class="button button-primary"
+                    href="www.google.com"
                     >Button1</a
-                  ><a class="button" href="www.google.com">Button2</a>
+                  ><a id="hero-btn-2" class="button" href="www.google.com"
+                    >Button2</a
+                  >
                 </div>
               </div>
               <div class="hero-figure anime-element">
@@ -100,36 +107,54 @@
                   <div class="feature-inner">
                     <div class="feature-icon">
                       <img
+                        id="feature1-img"
                         src="dist/images/a6ba0a23-b1f1-4b4b-b1ce-13a01bde422a.png"
                         alt="Feature 01"
+                        style="height: 10rem; width: 10rem; object-fit: cover"
                       />
                     </div>
-                    <h4 class="feature-title mt-24">Feature1</h4>
-                    <p class="text-sm mb-0">Description</p>
+                    <h4 id="feature1-title" class="feature-title mt-24">
+                      Feature1
+                    </h4>
+                    <p id="feature1-description" class="text-sm mb-0">
+                      Description
+                    </p>
                   </div>
                 </div>
                 <div class="feature text-center is-revealing">
                   <div class="feature-inner">
                     <div class="feature-icon">
                       <img
+                        id="feature2-img"
                         src="dist/images/a6ba0a23-b1f1-4b4b-b1ce-13a01bde422a.png"
                         alt="Feature 02"
+                        style="height: 10rem; width: 10rem; object-fit: cover"
                       />
                     </div>
-                    <h4 class="feature-title mt-24">Feature2</h4>
-                    <p class="text-sm mb-0">Description</p>
+                    <h4 id="feature2-title" class="feature-title mt-24">
+                      Feature2
+                    </h4>
+                    <p id="feature2-description" class="text-sm mb-0">
+                      Description
+                    </p>
                   </div>
                 </div>
                 <div class="feature text-center is-revealing">
                   <div class="feature-inner">
                     <div class="feature-icon">
                       <img
+                        id="feature3-img"
                         src="dist/images/66058f9b-ed84-4539-99fd-9b01be561191.png"
                         alt="Feature 03"
+                        style="height: 10rem; width: 10rem; object-fit: cover"
                       />
                     </div>
-                    <h4 class="feature-title mt-24">Feature3</h4>
-                    <p class="text-sm mb-0">Description</p>
+                    <h4 id="feature3-title" class="feature-title mt-24">
+                      Feature3
+                    </h4>
+                    <p id="feature3-description" class="text-sm mb-0">
+                      Description
+                    </p>
                   </div>
                 </div>
               </div>
@@ -139,9 +164,12 @@
         <section class="cta section">
           <div class="container">
             <div class="cta-inner section-inner">
-              <h3 class="section-title mt-0">Call To Action</h3>
+              <h3 id="footer-title" class="section-title mt-0">
+                Call To Action
+              </h3>
               <div class="cta-cta">
                 <a
+                  id="footer-btn"
                   class="button button-primary button-wide-mobile"
                   href="www.google.com"
                   >www.google.com</a

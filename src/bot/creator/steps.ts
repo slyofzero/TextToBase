@@ -1,5 +1,6 @@
 import { template1Steps } from "./1";
 import { template2Steps } from "./2";
+import { template3Steps } from "./3";
 
 export interface Step {
   setting: string;
@@ -18,4 +19,5 @@ export interface TemplateSteps {
 export const templateSteps: TemplateSteps = {
   1: template1Steps,
   2: template2Steps,
+  3: template3Steps,
 };
