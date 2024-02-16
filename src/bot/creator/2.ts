@@ -1,0 +1,153 @@
+import { Steps } from "./steps";
+
+export const template2Steps: Steps = {
+  1: {
+    setting: "hero section's title",
+    image: "./step-images/2/1.png",
+    selector: "#hero",
+    inputType: "text",
+  },
+  2: {
+    setting: "hero section's description",
+    image: "./step-images/2/2.png",
+    selector: "#hero-description",
+    inputType: "text",
+  },
+  3: {
+    setting: "hero section's button text",
+    image: "./step-images/2/3.png",
+    selector: "#hero-link",
+    inputType: "text",
+  },
+  4: {
+    setting: "hero section's button link",
+    image: "./step-images/2/3.png",
+    selector: "#hero-link",
+    inputType: "link",
+  },
+  5: {
+    setting: "hero section's image",
+    image: "./step-images/2/4.png",
+    selector: "#hero-img",
+    inputType: "image",
+  },
+  6: {
+    setting: "website's logo text",
+    image: "./step-images/2/5.png",
+    selector: "#logo",
+    inputType: "text",
+  },
+  7: {
+    setting: "first section's title",
+    image: "./step-images/2/6.png",
+    selector: "#section-1",
+    inputType: "text",
+  },
+  8: {
+    setting: "first feature's title",
+    image: "./step-images/2/7.png",
+    selector: "#first-feature-title",
+    inputType: "text",
+  },
+  9: {
+    setting: "first feature's description",
+    image: "./step-images/2/8.png",
+    selector: "#first-feature-description",
+    inputType: "text",
+  },
+  10: {
+    setting: "second feature's title",
+    image: "./step-images/2/9.png",
+    selector: "#second-feature-title",
+    inputType: "text",
+  },
+  11: {
+    setting: "second feature's description",
+    image: "./step-images/2/10.png",
+    selector: "#second-feature-description",
+    inputType: "text",
+  },
+  12: {
+    setting: "third feature's title",
+    image: "./step-images/2/11.png",
+    selector: "#third-feature-title",
+    inputType: "text",
+  },
+  13: {
+    setting: "third feature's description",
+    image: "./step-images/2/12.png",
+    selector: "#third-feature-description",
+    inputType: "text",
+  },
+  14: {
+    setting: "second section's title",
+    image: "./step-images/2/13.png",
+    selector: "#second-section-title",
+    inputType: "text",
+  },
+  15: {
+    setting: "second section's description",
+    image: "./step-images/2/14.png",
+    selector: "#second-section-description",
+    inputType: "text",
+  },
+  16: {
+    setting: "second section's button text",
+    image: "./step-images/2/15.png",
+    selector: "#second-section-btn",
+    inputType: "text",
+  },
+  17: {
+    setting: "second section's button link",
+    image: "./step-images/2/15.png",
+    selector: "#second-section-btn",
+    inputType: "link",
+  },
+  18: {
+    setting: "third section's title",
+    image: "./step-images/2/16.png",
+    selector: "#third-section-title",
+    inputType: "text",
+  },
+  19: {
+    setting: "third section's description",
+    image: "./step-images/2/17.png",
+    selector: "#third-section-description",
+    inputType: "text",
+  },
+  20: {
+    setting: "third section's button text",
+    image: "./step-images/2/18.png",
+    selector: "#third-section-btn",
+    inputType: "text",
+  },
+  21: {
+    setting: "third section's button link",
+    image: "./step-images/2/18.png",
+    selector: "#third-section-btn",
+    inputType: "link",
+  },
+  22: {
+    setting: "fourth section's title",
+    image: "./step-images/2/19.png",
+    selector: "#fourth-section-title",
+    inputType: "text",
+  },
+  23: {
+    setting: "footer's title",
+    image: "./step-images/2/20.png",
+    selector: "#footer-title",
+    inputType: "text",
+  },
+  24: {
+    setting: "footer's description",
+    image: "./step-images/2/21.png",
+    selector: "#footer-description",
+    inputType: "text",
+  },
+  25: {
+    setting: "website title",
+    selector: "title",
+    inputType: "text",
+  },
+};
