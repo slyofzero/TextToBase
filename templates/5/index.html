@@ -27,6 +27,11 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/hero.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -49,9 +54,11 @@
           <!-- CONTAINER MID -->
           <div class="container-mid">
             <img
+              id="logo"
               class="logo"
               src="assets/images/19b89fca-76ff-4ac9-a7db-9ed016eeb9bd.png"
               alt="logo"
+              style="height: 10rem; width: 35rem; object-fit: cover"
             />
 
             <!-- CYCLE SLIDER WRAPPER  -->
@@ -59,21 +66,21 @@
               <!-- CYCLE SLIDER -->
               <div id="cycle">
                 <div class="slide">
-                  <h1>Header</h1>
+                  <h1 id="hero-text">Header</h1>
                 </div>
               </div>
               <!-- /CYCLE SLIDER -->
             </div>
             <!-- /CYCLE SLIDER WRAPPER -->
 
-            <p>Description</p>
+            <p id="hero-description">Description</p>
 
             <!-- OPEN OVERLAY BUTTON -->
             <div class="arrow-wrap go-down">
               <!-- OPEN OVERLAY BUTTON INNER -->
               <div class="open-overlay down-button">
-                <i class="ti-arrow-down"></i>
-                <i class="ti-arrow-down"></i>
+                <i class="fas fa-arrow-down"></i>
+                <i class="fas fa-arrow-down"></i>
               </div>
               <!-- /OPEN OVERLAY BUTTON INNER -->
             </div>
@@ -117,9 +124,9 @@
             <div class="container-mid">
               <!-- CONTAINER -->
               <div class="container">
-                <h1>TITLE</h1>
+                <h1 id="section-title">TITLE</h1>
 
-                <p>DESCRIPTION</p>
+                <p id="section-description">DESCRIPTION</p>
 
                 <!-- SOCIAL LINKS -->
                 <ul class="social-icons">
@@ -127,8 +134,9 @@
                     <a
                       data-placement="bottom"
                       title="Twitter"
-                      class="ti-twitter-alt"
+                      class="fab fa-twitter"
                       href="https://twitter.com/"
+                      id="twitter-link"
                     >
                       <div class="overlay"></div>
                     </a>
@@ -137,8 +145,9 @@
                     <a
                       data-placement="bottom"
                       title="Telegram"
-                      class="fa fa-telegram"
+                      class="fab fa-telegram"
                       href="https://web.telegram.org"
+                      id="telegram-link"
                     >
                       <div class="overlay"></div>
                     </a>
@@ -155,8 +164,16 @@
         <!-- /OVERLAY-1 -->
 
         <!-- OVERLAY BACK BUTTON -->
-        <div class="up-button go-up">
-          <i class="ti-arrow-up"></i><i class="ti-arrow-up"></i>
+        <div
+          class="up-button go-up"
+          style="
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          ↑
         </div>
         <!-- /OVERLAY BACK BUTTON -->
       </div>
