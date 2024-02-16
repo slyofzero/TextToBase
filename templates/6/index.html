@@ -26,7 +26,12 @@
   <body class="dark">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">
-        <img src="images/709706f3-0e74-41cf-9f6a-7745c5cb8308.png" alt="logo" />
+        <img
+          src="images/709706f3-0e74-41cf-9f6a-7745c5cb8308.png"
+          alt="logo"
+          id="logo"
+          style="height: 3rem; width: 15rem; object-fit: cover"
+        />
       </a>
       <button
         class="navbar-toggler"
@@ -54,10 +59,10 @@
     >
       <div class="hero">
         <h1>
-          <span class="highlight">Title</span>
+          <span id="hero-text" class="highlight">Title</span>
         </h1>
-        <p class="lead mt-3 mx-auto">Description</p>
-        <a href="#" class="btn btn-primary mt-3"
+        <p id="hero-description" class="lead mt-3 mx-auto">Description</p>
+        <a id="hero-btn" href="#" class="btn btn-primary mt-3"
           >Button1
           <img src="images/right-arrow.svg" alt="arrow" />
         </a>
@@ -71,7 +76,7 @@
     <section class="section feature-highlight">
       <div class="container">
         <div class="section-title mini-title">
-          <h4>Section Title</h4>
+          <h4 id="second-title">Section Title</h4>
         </div>
 
         <div class="row">
@@ -83,9 +88,11 @@
                 width="64px"
                 alt="icon"
                 class="featured-item-icon"
+                style="height: 5rem; width: 5rem; object-fit: cover"
+                id="feature1-img"
               />
-              <h4 class="featured-item-title">Feature1</h4>
-              <p>Description</p>
+              <h4 id="feature1-title" class="featured-item-title">Feature1</h4>
+              <p id="feature1-description">Description</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
@@ -96,9 +103,11 @@
                 width="64px"
                 alt="icon"
                 class="featured-item-icon"
+                style="height: 5rem; width: 5rem; object-fit: cover"
+                id="feature2-img"
               />
-              <h4 class="featured-item-title">Feature 2</h4>
-              <p>Description</p>
+              <h4 id="feature2-title" class="featured-item-title">Feature 2</h4>
+              <p id="feature2-description">Description</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
@@ -109,9 +118,11 @@
                 width="64px"
                 alt="icon"
                 class="featured-item-icon"
+                style="height: 5rem; width: 5rem; object-fit: cover"
+                id="feature3-img"
               />
-              <h4 class="featured-item-title">Feature3</h4>
-              <p>Description</p>
+              <h4 id="feature3-title" class="featured-item-title">Feature3</h4>
+              <p id="feature3-description">Description</p>
             </div>
           </div>
         </div>
@@ -127,14 +138,15 @@
               src="images/0c9d4f64-50a2-4242-ab86-17273684e1aa.png"
               alt="image"
               class="img-fluid"
+              id="third-img"
             />
           </div>
           <div class="col-12 col-md-6">
-            <h6 class="text-info mb-4">Small Title</h6>
-            <h2 class="mb-4">Main Title</h2>
-            <p>Description</p>
+            <h6 class="text-info mb-4" id="third-small-title">Small Title</h6>
+            <h2 class="mb-4" id="third-title">Main Title</h2>
+            <p id="third-description">Description</p>
 
-            <a href="#" class="btn btn-primary mt-3">button2</a>
+            <a href="#" class="btn btn-primary mt-3" id="third-btn">button2</a>
           </div>
         </div>
       </div>
