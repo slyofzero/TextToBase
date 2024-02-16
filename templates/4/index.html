@@ -38,6 +38,11 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -49,13 +54,16 @@
             src="assets/img/cb5b0f39-0308-4077-a6db-353bd9638171.png"
             alt=""
             class="img-fluid"
+            id="logo"
         /></a>
 
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="#">Home</a></li>
             <li>
-              <a class="getstarted scrollto" href="www.google.com">Button</a>
+              <a id="nav-btn" class="getstarted scrollto" href="www.google.com"
+                >Button</a
+              >
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -74,10 +82,13 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h1>Header</h1>
-            <h2>Description</h2>
+            <h1 id="hero-text">Header</h1>
+            <h2 id="hero-description">Description</h2>
             <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="www.google.com" class="btn-get-started scrollto"
+              <a
+                href="www.google.com"
+                id="hero-btn-1"
+                class="btn-get-started scrollto"
                 >button2</a
               >
             </div>
@@ -88,9 +99,11 @@
             data-aos-delay="200"
           >
             <img
+              id="hero-img"
               src="assets/img/d2ddccee-43b3-4c2e-9d0a-677720070ce9.png"
               class="img-fluid animated"
               alt=""
+              style="height: 30rem; width: 30rem; object-fit: cover"
             />
           </div>
         </div>
@@ -103,20 +116,29 @@
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>Title</h2>
+            <h2 id="first-title">Title</h2>
           </div>
 
           <div class="row content">
             <div class="col-lg-6">
-              <p>Description</p>
+              <p id="first-description">Description</p>
               <ul>
-                <li><i class="ri-check-double-line"></i> bullet1</li>
-                <li><i class="ri-check-double-line"></i> bullet2</li>
-                <li><i class="ri-check-double-line"></i> bullet3</li>
+                <li>
+                  <i class="fas fa-check-double"></i>
+                  <span id="first-bullet-point">bullet1</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i>
+                  <span id="second-bullet-point">bullet2</span>
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i>
+                  <span id="third-bullet-point">bullet3</span>
+                </li>
               </ul>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>Description</p>
+              <p id="second-sub-description">Description</p>
             </div>
           </div>
         </div>
@@ -127,8 +149,8 @@
       <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>Title</h2>
-            <p>Description</p>
+            <h2 id="second-title">Title</h2>
+            <p id="second-description">Description</p>
           </div>
 
           <div class="row">
@@ -138,8 +160,8 @@
               data-aos-delay="100"
             >
               <div class="icon-box">
-                <h4>Feature 1</h4>
-                <p>Description</p>
+                <h4 id="first-feature-title">Feature 1</h4>
+                <p id="first-feature-description">Description</p>
               </div>
             </div>
 
@@ -149,8 +171,8 @@
               data-aos-delay="200"
             >
               <div class="icon-box">
-                <h4>Feature 2</h4>
-                <p>Description</p>
+                <h4 id="second-feature-title">Feature 2</h4>
+                <p id="second-feature-description">Description</p>
               </div>
             </div>
 
@@ -160,8 +182,8 @@
               data-aos-delay="300"
             >
               <div class="icon-box">
-                <h4>Feature 3</h4>
-                <p>Description</p>
+                <h4 id="third-feature-title">Feature 3</h4>
+                <p id="third-feature-description">Description</p>
               </div>
             </div>
           </div>
@@ -174,11 +196,14 @@
         <div class="container" data-aos="zoom-in">
           <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
-              <h3>Call To Action</h3>
-              <p>Description</p>
+              <h3 id="footer-title">Call To Action</h3>
+              <p id="footer-description">Description</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="www.google.com"
+              <a
+                class="cta-btn align-middle"
+                id="footer-btn"
+                href="www.google.com"
                 >CTA Button</a
               >
             </div>
@@ -207,7 +232,7 @@
     <a
       href="#"
       class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
+      ><i class="fas fa-arrow-up"></i
     ></a>
 
     <!-- Vendor JS Files -->
