@@ -1,0 +1,135 @@
+import { Steps } from "./steps";
+
+export const template7Steps: Steps = {
+  1: {
+    setting: "hero section's title",
+    image: "./step-images/7/1.png",
+    selector: "#hero-text",
+    inputType: "text",
+  },
+  2: {
+    setting: "hero section's description",
+    image: "./step-images/7/2.png",
+    selector: "#hero-description",
+    inputType: "text",
+  },
+  3: {
+    setting: "hero section's first button's text",
+    image: "./step-images/7/3.png",
+    selector: "#hero-btn-1",
+    inputType: "text",
+  },
+  4: {
+    setting: "hero section's first button's link",
+    image: "./step-images/7/3.png",
+    selector: "#hero-btn-1",
+    inputType: "link",
+  },
+  5: {
+    setting: "hero section's second button's text",
+    image: "./step-images/7/4.png",
+    selector: "#hero-btn-2",
+    inputType: "text",
+  },
+  6: {
+    setting: "hero section's second button's link",
+    image: "./step-images/7/4.png",
+    selector: "#hero-btn-2",
+    inputType: "link",
+  },
+  7: {
+    setting: "second section's title",
+    image: "./step-images/7/5.png",
+    selector: "#section1-title",
+    inputType: "text",
+  },
+  8: {
+    setting: "second section's description",
+    image: "./step-images/7/6.png",
+    selector: "#section1-description",
+    inputType: "text",
+  },
+  9: {
+    setting: "second section's button text",
+    image: "./step-images/7/7.png",
+    selector: "#section1-btn",
+    inputType: "text",
+  },
+  10: {
+    setting: "second section's button link",
+    image: "./step-images/7/7.png",
+    selector: "#section1-btn",
+    inputType: "link",
+  },
+  11: {
+    setting: "second section's image",
+    image: "./step-images/7/8.png",
+    selector: "#section1-img",
+    inputType: "image",
+  },
+  12: {
+    setting: "third section's title",
+    image: "./step-images/7/9.png",
+    selector: "#section2-title",
+    inputType: "text",
+  },
+  13: {
+    setting: "third section's small text",
+    image: "./step-images/7/10.png",
+    selector: "#section2-small-text",
+    inputType: "text",
+  },
+  14: {
+    setting: "third section's description",
+    image: "./step-images/7/11.png",
+    selector: "#section2-description",
+    inputType: "text",
+  },
+  15: {
+    setting: "third section's image",
+    image: "./step-images/7/12.png",
+    selector: "#section2-img",
+    inputType: "image",
+  },
+  16: {
+    setting: "fourth section's title",
+    image: "./step-images/7/13.png",
+    selector: "#section3-title",
+    inputType: "text",
+  },
+  17: {
+    setting: "fourth section's sub description",
+    image: "./step-images/7/14.png",
+    selector: "#section3-sub-description",
+    inputType: "text",
+  },
+  18: {
+    setting: "fourth section's description",
+    image: "./step-images/7/15.png",
+    selector: "#section3-description",
+    inputType: "text",
+  },
+  19: {
+    setting: "fourth section's button text",
+    image: "./step-images/7/16.png",
+    selector: "#section3-btn",
+    inputType: "text",
+  },
+  20: {
+    setting: "fourth section's button link",
+    image: "./step-images/7/16.png",
+    selector: "#section3-btn",
+    inputType: "link",
+  },
+  21: {
+    setting: "fourth section's image",
+    image: "./step-images/7/17.png",
+    selector: "#section3-img",
+    inputType: "image",
+  },
+  22: {
+    setting: "website title",
+    selector: "title",
+    inputType: "text",
+  },
+};

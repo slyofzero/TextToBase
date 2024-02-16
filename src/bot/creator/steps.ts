@@ -4,6 +4,7 @@ import { template3Steps } from "./3";
 import { template4Steps } from "./4";
 import { template5Steps } from "./5";
 import { template6Steps } from "./6";
+import { template7Steps } from "./7";
 import { template8Steps } from "./8";
 
 export interface Step {
@@ -27,5 +28,6 @@ export const templateSteps: TemplateSteps = {
   4: template4Steps,
   5: template5Steps,
   6: template6Steps,
+  7: template7Steps,
   8: template8Steps,
 };

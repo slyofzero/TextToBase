@@ -66,7 +66,7 @@ export const templateDescriptions: TemplateDescription[] = [
     id: 7,
     name: "template7",
     category: "Crypto",
-    estimatedTime: "3 Minutes",
+    estimatedTime: "5 Minutes",
     preview: "https://website-ai-previews.vercel.app/7",
     details:
       "A vibrant website layout bathed in rich shades of purple and deep blue, exuding a futuristic and tech-savvy ambiance. Dominating the scene are striking isometric illustrations, including a sleek laptop emanating golden cryptocurrency symbols, a modern smartphone, and distinct pedestals showcasing various digital coins. Flanking these illustrations are three minimalist icons representing technology, fairness, and global trust, each set against the deep backdrop. The overall design seamlessly blends a sense of innovation with the world of decentralized finance, making it highly appealing to tech enthusiasts and modern-day investors. The layout is clean, well-spaced, and gives a sense of cutting-edge sophistication.",
