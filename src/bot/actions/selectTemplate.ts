@@ -1,6 +1,7 @@
 import { CallbackQueryContext, Context } from "grammy";
-import * as creator from "../creator";
 import { errorHandler } from "@/utils/handlers";
+import { executeStep } from "../creator";
+import { userState } from "@/vars/userState";
 
 export async function selectTemplate(ctx: CallbackQueryContext<Context>) {
   const confirmation = await ctx.reply("Getting template ready...");
@@ -10,12 +11,13 @@ export async function selectTemplate(ctx: CallbackQueryContext<Context>) {
   );
 
   if (!isNaN(selectedTemplate) && selectedTemplate) {
-    if (selectedTemplate === 1)
-      await creator.createTemplate1(ctx, selectedTemplate);
-    else if (selectedTemplate === 2)
-      await creator.createTemplate2(ctx, selectedTemplate);
+    const from = ctx.from;
+    if (!from) return ctx.reply("Please send the message again");
+    userState[from.id] = `${selectedTemplate}-1`;
+    // @ts-expect-error Weird type we have here
+    await executeStep(ctx);
 
-    ctx.deleteMessages([confirmation.message_id]);
+    ctx.deleteMessages([confirmation.message_id]).catch((e) => errorHandler(e));
     ctx.deleteMessage().catch((e) => errorHandler(e));
   }
 }
