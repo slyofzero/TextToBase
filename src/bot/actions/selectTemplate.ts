@@ -12,6 +12,8 @@ export async function selectTemplate(ctx: CallbackQueryContext<Context>) {
   if (!isNaN(selectedTemplate) && selectedTemplate) {
     if (selectedTemplate === 1)
       await creator.createTemplate1(ctx, selectedTemplate);
+    else if (selectedTemplate === 2)
+      await creator.createTemplate2(ctx, selectedTemplate);
 
     ctx.deleteMessages([confirmation.message_id]);
     ctx.deleteMessage().catch((e) => errorHandler(e));
