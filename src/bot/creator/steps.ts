@@ -1,4 +1,5 @@
 import { template1Steps } from "./1";
+import { template10Steps } from "./10";
 import { template2Steps } from "./2";
 import { template3Steps } from "./3";
 import { template4Steps } from "./4";
@@ -32,4 +33,5 @@ export const templateSteps: TemplateSteps = {
   7: template7Steps,
   8: template8Steps,
   9: template9Steps,
+  10: template10Steps,
 };
