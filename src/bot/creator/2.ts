@@ -4,7 +4,7 @@ export const template2Steps: Steps = {
   1: {
     setting: "hero section's title",
     image: "./step-images/2/1.png",
-    selector: "#hero",
+    selector: "#hero-text",
     inputType: "text",
   },
   2: {
